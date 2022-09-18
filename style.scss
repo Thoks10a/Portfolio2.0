@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #2e2e2e #262626;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(41, 41, 41);
+    border-radius: 15px;
+    border: 2px solid #414141;
+  }
+
+
+body {
+
+    padding: 0;
+
+    margin: 0;
+
+    font-family: 'Rubik', sans-serif;
+
+}
+
+nav {
+
+    ul {
+        padding-inline-start: 10px;
+        margin: 20px;
+    }
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    position: fixed;
+
+    background-color: #1e1e1e;
+
+    z-index: 99;
+
+    align-items: center;
+
+    border: #414141 0.5px solid;
+
+    div {
+        a:hover {
+            opacity: 0.5;
+            transition: opacity 1s;
+        }
+    }
+
+    
+
+}
+
+nav a {
+
+    color: #747474;
+
+    margin: auto 20px auto 20px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+nav li {
+
+    color: #747474;
+
+    float: left;
+
+    list-style: none;
+
+    //margin-left: 20px;
+
+    a:hover {
+        opacity: 0.5;
+        transition: opacity 1s;
+    }
+
+}
+
+
+.ul-icons {
+    img:hover {
+        opacity: 0.5;
+        transition: opacity 1s;
+    }
+}
+
+
+
+.image-background {
+    background-image: url("./assets/computador/workspace-1280538_1920.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    display: flex;
+    align-items: center; //centraliza horizontalmente
+    //justify-content: center; //cetraliza verticalmente
+    
+}
+
+
+.introduction {
+    padding: 100px;
+    h1 {
+        color: white;
+        font-size: 55px;
+    }
+
+    h5 {
+        color: #aaaaaa;
+        font-size: 25px;
+    }
+}
+
+.div-sections {
+    background-color: #1e2225;
+    display: flex;
+    align-items: center; //centraliza horizontalmente
+    justify-content: center; //cetraliza verticalmente
+    flex-direction: column;
+    .div-sections-div {
+        width: 50%;
+    }
+    padding: 50px;
+    color: rgb(184, 184, 184)
+}
+
+
+.div-sections2 {
+    background-color: #24282e;
+    display: flex;
+    align-items: center; //centraliza horizontalmente
+    justify-content: center; //cetraliza verticalmente
+    flex-direction: column;
+    padding: 50px;
+    color: rgb(184, 184, 184);
+}
+
+
+.rodape {
+    background-color: #24282e;
+    display: flex;
+    align-items: center; //centraliza horizontalmente
+    justify-content: center; //cetraliza verticalmente
+    height: 50px;
+    a {
+        padding: 0 10px 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        opacity: 0.5;
+        transition: opacity 1s;
+    }
+
+    color: #747474;
+
+   
+}
+
+
+.container {
+  flex-grow: 1;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards__item {
+  height: 400px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(#ffffff, 0.1);
+    pointer-events: none;
+  }
+  
+  &:nth-child(1) {
+    background-image: linear-gradient(45deg, #1e2225, #24282e);
+  }
+  
+  &:nth-child(2) {
+    background-image: linear-gradient(45deg, #1e2225, #24282e);
+  }
+  
+  &:nth-child(3) {
+    background-image: linear-gradient(45deg, #1e2225, #24282e);
+  }
+}
+
+.card__frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card__picture {
+  margin-bottom: 12px;
+  filter: invert(1);
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.card__title {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(#000000, 0.2);
+  transition: 0.5s;
+  cursor: pointer;
+  
+  &::before {
+    content: "Read";
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  
+  &:hover,
+  &:focus {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    opacity: 0.9;
+    
+    &::before {
+      content: none;
+    }
+  }
+  
+  .card:nth-child(1) & {
+    background-image: linear-gradient(45deg, #3503ad, #f7308c);
+  }
+  
+  .card:nth-child(2) & {
+    background-image: linear-gradient(45deg, #a9c43c, #09afff);
+  }
+  
+  .card:nth-child(3) & {
+    background-image: linear-gradient(45deg, #e91e63, #ffeb3b);
+  }
+}
+
+.card__content {
+  z-index: 1;
+  padding: 20px;
+  line-height: 1.4;
+  opacity: 0;
+  visibility: hidden;
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: 0s;
+  
+  .card__overlay:hover ~ & {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s 0.3s;
+  }
+  
+  h2 {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    border-radius: 50%;
+}
+.btn::after {
+    content: "↑";
+    font-size: 32px;
+    font-weight: bold;
+    color: aliceblue;
+    transition: margin-top 250ms;
+}
+.btn:hover::after {
+    margin-top:-8px;
+}
+
+.card__frame {
+    a{
+        text-decoration: none;
+        color: aliceblue;
+        transition: 0.5s;
+    }
+
+    a:hover {
+        opacity: 0.5;
+        //background-color: #474747;
+        border-radius: 5%;
+        width: 100px;
+    }
+}
